@@ -1,0 +1,39 @@
+
+Web app is built with php 8.2.0 and mysql - PhpMyAdmin 5.2.0
+
+
+Web site entry point is: http://127.0.0.1:8000/img
+
+Once we enter: https://mayak.travel/ all images are retrieved
+
+Then it is redirected to: http://127.0.0.1:8000/imgresult where we see 12 recors per page
+
+This setting can be chnaged from this line
+
+ImgController.php
+
+Line 198-203
+
+$images = $paginator->paginate(
+	$query, // Query to paginate
+	$request->query->getInt('page', 1), // Page number
+	12 // Limit per page
+);  
+		
+	12 // change it to another value
+
+The web site is built with php 8.2.0 and the latest symfony version
+
+Symfony 7
+You are using Symfony 7.0.3 version
+
+
+these setting can be seen on the entry point of the web app
+http://127.0.0.1:8000/
+
+The Database is found on the folder database: ax1.sql
+
+Kindly note that it is best to chnage the database from MyISAM to InnoDB
+	
+		
+		
